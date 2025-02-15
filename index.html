@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White-Label Self-Rent Car App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>White-Label Self-Rent Car App</h1>
+        <p>Own the app with your branding & reputation</p>
+        <a href="#pricing" class="cta-button">Get Started</a>
+    </header>
+
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+
+    <section id="problems">
+        <h2>Struggling with Self-Rent Business Challenges?</h2>
+        <ul>
+            <li>🚗 Clients extending deadlines without notice?</li>
+            <li>🔍 Unclear availability & identity verification issues?</li>
+            <li>💸 Lost cash transactions & tracking problems?</li>
+            <li>📍 GPS disabled, making tracking difficult?</li>
+        </ul>
+        <h3>Our White-Label Self-Rent App Solves It All!</h3>
+        <ul>
+            <li>✅ Automated deadline extensions & clear availability</li>
+            <li>🔐 Secure ID verification & digital payments</li>
+            <li>📡 GPS tracking & automated notifications</li>
+            <li>📊 Full transparency with a seamless admin dashboard</li>
+        </ul>
+    </section>
+
+    <section id="features">
+        <h2>Why Choose Our App?</h2>
+        <ol>
+            <li>🚀 Fully branded & customizable</li>
+            <li>📱 Available on Android devices</li>
+            <li>💰 Affordable pricing: ₹45,000/year or ₹3,750/month</li>
+            <li>📅 Quick deployment</li>
+            <li>🎯 Dedicated support</li>
+        </ol>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing Plans</h2>
+
+        <div class="pricing-card">
+            <h3>Annual Plan</h3>
+            <p>₹45,000 per year</p>
+            <br>
+            <a href="#payment" class="button">Buy Now</a>
+        </div>
+
+        <div class="pricing-card">
+            <h3>Monthly Plan</h3>
+            <p>₹3,750 per month</p>
+            <br>
+            <a href="#payment" class="button">Buy Now</a>
+        </div>
+        <br><br><br>
+        <div class="container">
+            <section id="payment" class="text-center">
+                <h2>Payment Methods</h2>
+                <p>Select a payment method to proceed</p>
+                <div class="payment-methods">
+                    <img src="/intenship/image/phonePay.png" alt="PhonePe" onclick="makePayment('PhonePe')">
+                    <img src="/intenship/image/google-pay.png" alt="Google Pay" onclick="makePayment('Google Pay')">
+                    <img src="/intenship/image/criditCard.png" alt="Credit Card" onclick="makePayment('Credit Card')">
+                    <img src="/intenship/image/NetBanking.jpg" alt="Net Banking" onclick="makePayment('Net Banking')">
+                </div>
+                <button class="button" onclick="confirmPayment()">Proceed to Pay</button>
+                <p id="payment-message" class="hidden">Payment successful! Thank you for your purchase.</p>
+            </section>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <ol type="1">
+            <li>📩 Contact us to discuss your requirements</li>
+            <li>⚙️ We set up your white-label app</li>
+            <li>🚀 Launch & start renting your vehicles online</li>
+        </ol>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="form-message" class="hidden"></p>
+    </section>
+
+    <div class="container"></div>
+        <section id="faq" class="text-center">
+            <h2>Frequently Asked Questions</h2>
+            <button class="button" onclick="toggleFAQ()">Show/Hide FAQs</button>
+            <div id="faq-content" class="hidden">
+                <p><strong>Q:</strong> What is a white-label self-rent car app?</p>
+                <p><strong>A:</strong> It is a customizable self-rent car platform with your branding.</p>
+                <p><strong>Q:</strong> How much does it cost?</p>
+                <p><strong>A:</strong> Rs. 45000 per year or Rs. 3750 per month.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 White-Label Self-Rent Car App. All Rights Reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
