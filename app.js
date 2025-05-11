@@ -13,13 +13,16 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         document.getElementById('form-message').classList.remove('hidden');
     }
 });
+
 function makePayment(method) {
     alert('Redirecting to ' + method + ' for payment...');
     window.location.href = 'https://www.example.com/' + method.toLowerCase();
 }
+
 function confirmPayment() {
     document.getElementById('payment-message').classList.remove('hidden');
 }
+
 function toggleFAQ() {
     let faq = document.getElementById('faq-content');
     faq.classList.toggle('hidden');
