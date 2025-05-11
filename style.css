@@ -4,19 +4,19 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Vibrant Gradient */
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
     color: #333;
     transition: background-color 0.5s ease;
 }
 
 /* Header */
 header {
-    background: #ff4d7f; /* Strong Pinkish Gradient */
+    background: #ff4d7f;
     color: white;
     padding: 30px;
     position: relative;
     animation: fadeIn 1.5s ease-in-out;
-    border-bottom: 3px solid #ffb3c1; /* Soft Bottom Border */
+    border-bottom: 3px solid #ffb3c1;
 }
 
 @keyframes fadeIn {
@@ -91,6 +91,12 @@ section {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.dark-mode section {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.05);
+}
+
 /* Pricing Cards */
 .pricing-card {
     background: #ffffff;
@@ -108,8 +114,16 @@ section {
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
 }
 
+.dark-mode .pricing-card {
+    background: #2a2a2a;
+    color: #f0f0f0;
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.05);
+}
+
 /* Form Styles */
-form input, form textarea, form button {
+form input,
+form textarea,
+form button {
     width: 80%;
     padding: 15px;
     margin: 15px 0;
@@ -119,7 +133,8 @@ form input, form textarea, form button {
     transition: border-color 0.3s ease;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
     border-color: #007bff;
     outline: none;
 }
@@ -138,7 +153,84 @@ form button:hover {
     transform: scale(1.05);
 }
 
+.dark-mode form input,
+.dark-mode form textarea {
+    background: #2b2b2b;
+    border-color: #555;
+    color: #fff;
+}
+
+.dark-mode form button {
+    background: #0056b3;
+}
+
 /* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #f0f0f0;
+}
+
+.faq-answer {
+    background: #fafafa;
+    border-left: 3px solid #007bff;
+    margin: 5px 0 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #444;
+    transition: all 0.3s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Dark Mode: FAQ Section */
+body.dark-mode .faq-section {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .faq-question {
+    background: #2b2b2b;
+    border-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .faq-question:hover {
+    background: #3a3a3a;
+}
+
+body.dark-mode .faq-answer {
+    background: #2a2a2a;
+    color: #ccc;
+    border-left-color: #00bfff;
+}
+
+/* Button */
 .button {
     color: white;
     background: #007bff;
@@ -167,6 +259,7 @@ form button:hover {
     transform: scale(1.1);
 }
 
+/* Toast Notification */
 .toast {
     position: fixed;
     bottom: 20px;
@@ -180,81 +273,30 @@ form button:hover {
     transition: opacity 0.5s, transform 0.5s;
 }
 
-.toast.success { background: #28a745; }
-.toast.error { background: #dc3545; }
+.toast.success {
+    background: #28a745;
+}
+
+.toast.error {
+    background: #dc3545;
+}
 
 .toast.fadeout {
     opacity: 0;
     transform: translateY(20px);
 }
 
-/* Base Styling */
-.faq-section {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 12px;
-  background: #f9f9f9;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+.dark-mode .toast {
+    background: #444;
+    color: #fff;
 }
 
-/* Question Styling */
-.faq-question {
-  width: 100%;
-  text-align: left;
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px 20px;
-  margin-top: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
+.dark-mode .toast.success {
+    background: #2e8b57;
 }
 
-.faq-question:hover {
-  background: #f0f0f0;
-}
-
-/* Answer Styling */
-.faq-answer {
-  background: #fafafa;
-  border-left: 3px solid #007bff;
-  margin: 5px 0 20px;
-  padding: 15px 20px;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  color: #444;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Hidden Utility Class */
-.hidden {
-  display: none;
-}
-
-/* Dark Mode Support */
-body.dark-mode .faq-section {
-  background: #1e1e1e;
-  color: #e0e0e0;
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
-}
-
-body.dark-mode .faq-question {
-  background: #2b2b2b;
-  border-color: #444;
-  color: #fff;
-}
-
-body.dark-mode .faq-question:hover {
-  background: #3a3a3a;
-}
-
-body.dark-mode .faq-answer {
-  background: #2a2a2a;
-  color: #ccc;
-  border-left-color: #00bfff;
+.dark-mode .toast.error {
+    background: #b22222;
 }
 
 /* Footer */
@@ -265,6 +307,11 @@ footer {
     margin-top: 40px;
     font-size: 1rem;
     box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode footer {
+    background: #111;
+    color: #ccc;
 }
 
 /* Mobile Responsiveness */
@@ -279,7 +326,9 @@ footer {
     header h1 {
         font-size: 2rem;
     }
-    form input, form textarea, form button {
+    form input,
+    form textarea,
+    form button {
         width: 90%;
     }
     #dark-mode-toggle {
